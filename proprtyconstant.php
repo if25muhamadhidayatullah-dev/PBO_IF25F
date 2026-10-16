@@ -42,6 +42,16 @@ $produk->stok = 5;
 
 
 
+//hitung pajak
+
+$pajak = produk::PAJAK * 100; // 1,1jt
+
+$jumlahpajak = $produk->harga * produk::PAJAK;
+
+
+//total
+
+$total = $produk->harga + $jumlahpajak;
 
 
 echo "Produk: ". $produk->nama;
@@ -61,3 +71,8 @@ echo "Pajak: ". $produk ->pajak()."%";
 echo "<br/>";
 
 echo "Total Harga: Rp". $produk->total();
+echo "Pajak: ". $pajak. "%";
+
+echo "<br/>";
+
+echo "Total Harga: Rp". $total;
